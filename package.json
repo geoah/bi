@@ -1,0 +1,20 @@
+{
+  "name": "bi",
+  "version": "0.1.0",
+  "description": "Prototype http & websocket abstraction thingie with middleware support.",
+  "main": "lib",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geoah/bi-io"
+  },
+  "author": "George Antoniadis <george@noodles.gr>",
+  "bugs": {
+    "url": "https://github.com/geoah/bi/issues"
+  },
+  "homepage": "https://github.com/geoah/bi"
+}
