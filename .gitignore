@@ -1,0 +1,15 @@
+# Node
+node_modules
+
+# Coffee-Script
+lib/*.js
+examples/*.js
+test/lib/*.js
+*.map
+
+# OS
+.DS_Store
+._*
+
+# Editor
+.idea
