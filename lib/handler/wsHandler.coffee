@@ -28,7 +28,7 @@ class WsHandler extends Handler
           headers: headers
           body: body
           query: [] # TODO Parse event for query
-          path: path
+          path: if path[0] isnt '/' then "/#{path}" else path
 
         send: (body) ->
           cb body if cb
