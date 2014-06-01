@@ -6,7 +6,6 @@ class Route
   dispatch: (bi) => # TODO , out) =>
     index = 0
     stack = @router.stack.concat @stack
-    console.info stack
 
     returnValues = []
 
