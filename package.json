@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Prototype http & websocket abstraction thingie with middleware support.",
   "main": "lib",
-  "dependencies": {},
+  "dependencies": {
+    "socket.io": "^1.0.2",
+    "socketio-wildcard": "^0.1.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "mocha"
