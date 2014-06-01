@@ -3,17 +3,16 @@ http = require 'http'
 Router = require './router/router'
 Route = require './router/route'
 HttpHandler = require './handler/httpHandler'
+WsHandler = require './handler/wsHandler'
 
 class Bi
   constructor: (server) ->
-    @http = server
-    # @ws = io server
-
+    @server = server
     @router = new Router
 
     @handlers =
       http: new HttpHandler @
-      # ws: new WsHandler @
+      ws: new WsHandler @
 
   api: (basePath, endpoints) ->
     for endpoint, stack of endpoints
