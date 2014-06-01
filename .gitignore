@@ -2,9 +2,7 @@
 node_modules
 
 # Coffee-Script
-lib/*.js
-examples/*.js
-test/lib/*.js
+*.js
 *.map
 
 # OS
