@@ -15,13 +15,12 @@ class Router extends EventEmitter
   # Tries to find a valid Route for the given request.
   # Returns the Route or false if no Routes match the request.
   resolve: (ctx) ->
-    request = ctx.req
     # logger.debug "[Router] Testing #{@vhostRegexp} against #{request.hostname}"
-    if @testVhost request.hostname
+    if @testVhost ctx.hostname
       for route in @routes
-        if request.method?
-          if request.method in route.methods
-            urlParts = url.parse request.path, true
+        if ctx.method?
+          if ctx.method in route.methods
+            urlParts = url.parse ctx.path, true
             pathname = urlParts.pathname
             params = route.match pathname
             if params isnt false

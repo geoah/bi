@@ -47,13 +47,12 @@ class HttpHandler extends Handler
       http:
         req: httpRequest
         res: httpResponse
-      req:
-        hostname: httpRequest.hostname
-        method: httpRequest.method.toLowerCase()
-        headers: httpRequest.headers or []
-        body: httpRequest.body
-        query: httpRequest.query or []
-        path: httpRequest.url or ''
+      hostname: httpRequest.hostname
+      method: httpRequest.method.toLowerCase()
+      headers: httpRequest.headers or []
+      body: httpRequest.body
+      query: httpRequest.query or []
+      path: httpRequest.url or ''
 
       send: (body) ->
         body = JSON.stringify body if typeof body isnt "string"

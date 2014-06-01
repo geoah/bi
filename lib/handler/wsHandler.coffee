@@ -22,13 +22,12 @@ class WsHandler extends Handler
       ctx =
         transport: 'ws'
         ws: socket
-        req:
-          hostname: headers.host
-          method: method or 'get'
-          headers: headers
-          body: body
-          query: [] # TODO Parse event for query
-          path: if path[0] isnt '/' then "/#{path}" else path
+        hostname: headers.host
+        method: method or 'get'
+        headers: headers
+        body: body
+        query: [] # TODO Parse event for query
+        path: if path[0] isnt '/' then "/#{path}" else path
 
         send: (body) ->
           cb body if cb
