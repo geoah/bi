@@ -62,7 +62,7 @@ class HttpHandler extends Handler
     @dispatch ctx
 
   constructor: (@bi) ->
-    bi.http.on 'request', (httpRequest, httpResponse) =>
+    @bi.server.on 'request', (httpRequest, httpResponse) =>
       httpResponse.setHeader 'Access-Control-Allow-Origin', '*'
       httpResponse.setHeader 'Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'
       httpResponse.setHeader 'Access-Control-Allow-Headers', 'Content-Type, X-Token'
